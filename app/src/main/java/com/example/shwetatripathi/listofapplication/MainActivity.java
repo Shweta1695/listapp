@@ -22,13 +22,15 @@ public class MainActivity extends ListActivity {
     private PackageManager packageManager=null;
     private List<ApplicationInfo> applist=null;
     private AppAdapter listadapter=null;
+    private ListView list;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        list = (ListView) findViewById(R.id.list);
 
         packageManager =getPackageManager();
 
